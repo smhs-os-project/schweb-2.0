@@ -6,32 +6,29 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    'plugin:react/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    'airbnb-typescript',
+    "airbnb-typescript",
     "plugin:prettier/recommended",
   ],
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: "module",
     project: "./tsconfig.json",
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ["react", "@typescript-eslint", "react-hooks"],
   rules: {
     "@typescript-eslint/consistent-type-imports": [
       2,
       {
-        prefer: "type-imports"
+        prefer: "type-imports",
       },
     ],
     "@typescript-eslint/explicit-module-boundary-types": 0,
@@ -39,8 +36,18 @@ module.exports = {
     "import/order": [
       1,
       {
-        groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
+        groups: [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+        ],
       },
     ],
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
   },
 };

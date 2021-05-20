@@ -71,8 +71,8 @@ export default function SetupUIStepsBase({
         {step && <h1 className="step-number text-2xl font-light">{step}</h1>}
         <h1 className="step-title text-2xl font-bold">{title}</h1>
       </div>
-      <div className="self-start">{children}</div>
-      <div className="self-end">
+      <div className="self-start overflow-scroll">{children}</div>
+      <div className="self-center">
         <div className="flex space-x-2">
           <SetupUIButton color="sweet-orange" listener={onPrev}>
             上一步

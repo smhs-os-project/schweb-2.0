@@ -21,8 +21,9 @@ export default function Home() {
           <AnnouncementsField />
         </FieldsGroup>
         <PopupGroup>
-          <Popup level={PopupLevel.WARN}>笑死，你又沒錢贊助。</Popup>
-          <Popup level={PopupLevel.INFO}>網站還在架設。想要支持我們嗎？</Popup>
+          <Popup level={PopupLevel.INFO}>
+            網站還在架設。如有任何問題歡迎匯報給我們！
+          </Popup>
         </PopupGroup>
       </BasePage>
     </>
